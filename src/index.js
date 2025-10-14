@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Contador from './components/Contador';
 import DibujosComplejos from './components/DibujosComplejos';
+import DibujosComplejosRender from './components/DibujosComplejosRender';
+import PadreDeportes from './components/PadreDeportes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DibujosComplejos/>
+    <PadreDeportes/>
   </React.StrictMode>
 );
 
