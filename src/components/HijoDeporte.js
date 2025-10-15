@@ -1,21 +1,20 @@
 import { Component } from "react";
 class HijoDeporte extends Component {       
-    state={
-        favorito:""
-    }
-    mostrarFavorito=()=>{
-        this.setState({
-            favorito:this.props.nombre
-        })
-
-    }
+ 
+seleccionarFavorito=()=>{
+    //capturamos el deporte del propio component del props
+    var deporte=this.props.nombre;
+    //invocamos al metodo del padre que nos llega por props
+    this.props.mostrarFavorito(deporte);
+}
+    
 
     render() {
         return (
             <div>
                 <h3 style={{color:"blue"}}>Deporte: {this.props.nombre}</h3>
-                <h2 style={{backgroundColor:"yellow"}}>Su deporte Favorito es:{this.state.favorito}</h2>
-                <button onClick={this.mostrarFavorito}>Seleccionar favorito </button>
+              
+                <button onClick={this.seleccionarFavorito}>Seleccionar favorito </button>
             </div>
         )
     }
